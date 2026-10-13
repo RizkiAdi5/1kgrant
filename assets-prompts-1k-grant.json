@@ -1,0 +1,197 @@
+{
+  "project": {
+    "name": "Netiquette - GST InvoiceNow S$1k Transition Grant Landing Page",
+    "generator": "Google Gemini (image generation)",
+    "version": "1.0",
+    "language_on_page": "English",
+    "how_to_use": [
+      "Generate each asset in a NEW Gemini chat, copy the full 'prompt' field as-is.",
+      "For consistent style, attach 1-2 screenshots of the existing Netiquette doodle illustrations (e.g. the 'confused woman at monitor' and 'man holding document' images) together with the prompt and say: 'match this illustration style'.",
+      "Gemini does not produce real transparency. Generate on pure white background, then remove the background (remove.bg / Photoshop / Canva) for assets marked 'needs_transparent': true.",
+      "Do NOT let Gemini draw any official logo (IRAS, IMDA, ACRA, Peppol, Netiquette). Those are placed by HTML on top of blank panels. All prompts already ask for no logos and no text.",
+      "Save files with the exact 'filename' into the folder 'assets/img/'. Export as PNG first; I will convert to WebP when building the page."
+    ]
+  },
+
+  "global_style": {
+    "style_keywords": "hand-drawn doodle illustration, bold black ink outlines with slightly uneven line weight, flat fills, minimal shading, playful editorial style, modern SaaS website illustration",
+    "palette": {
+      "primary_blue": "#4A90E2",
+      "light_blue": "#A9CFF5",
+      "navy": "#2B4A6B",
+      "black_line": "#111111",
+      "white_bg": "#FFFFFF",
+      "accent_gold_for_money_only": "#F5B82E"
+    },
+    "color_rule": "Only black line art + white + blue tones. Gold is allowed ONLY on coins/money elements.",
+    "characters": "Diverse Singaporean office workers (Chinese, Malay, Indian), friendly expressive faces, simple cartoon proportions, business-casual clothes in blue",
+    "global_avoid": "no text, no letters, no numbers, no logos, no brand marks, no watermark, no photorealism, no 3D render, no gradients, no drop shadows, no purple, no green, no cluttered background"
+  },
+
+  "assets": [
+    {
+      "id": "hero",
+      "filename": "hero-grant.png",
+      "section": "Hero (right side, next to headline + eligibility form)",
+      "aspect_ratio": "4:3",
+      "target_size_px": "1600x1200",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration in a modern SaaS website style: a cheerful Singaporean small-business owner in a blue shirt sitting at a laptop, pressing a big send button; from the laptop screen a digital invoice document flies out along a curved dotted line toward a stack of gold coins and an open hand receiving them, symbolising a cash grant. Small sparkles and motion lines around. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), gold (#F5B82E) only on the coins, pure white background, generous empty space around the subject. Style: playful editorial doodle, minimal shading. No text, no letters, no numbers, no logos, no watermark, no 3D, no gradients, no photorealism."
+    },
+    {
+      "id": "what_is_invoicenow",
+      "filename": "invoicenow-flow.png",
+      "section": "What is GST InvoiceNow (explainer, 5-corner flow)",
+      "aspect_ratio": "16:9",
+      "target_size_px": "1920x1080",
+      "needs_transparent": true,
+      "layout_note": "The blank rounded panel on the right will hold the real IRAS logo via HTML.",
+      "prompt": "Hand-drawn doodle explainer illustration on pure white background, left to right flow: on the left a small shop owner at a computer sending an invoice; the invoice travels through a glowing blue network of connected nodes in the middle; it arrives at a second computer of a buyer on the far right of the bottom row; at the same time a dotted copy of the invoice goes up to a large EMPTY rounded rectangle panel at the top right (leave the panel completely blank and white inside, it will hold a logo later). Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, minimal shading, playful SaaS website style, clean composition with lots of white space. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "timeline",
+      "filename": "mandate-timeline.png",
+      "section": "Mandatory timeline 2026-2031 (illustration beside the HTML timeline)",
+      "aspect_ratio": "1:1",
+      "target_size_px": "1200x1200",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration: a Singaporean office worker in a blue shirt pointing with a pen at a large wall calendar with several pages flipping and a few circled dates (circles only, no numbers written), an alarm clock and an hourglass beside it, conveying an upcoming deadline in a friendly not stressful way. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "eligibility",
+      "filename": "eligibility-check.png",
+      "section": "Who is eligible (checklist section)",
+      "aspect_ratio": "1:1",
+      "target_size_px": "1200x1200",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration: a smiling Malay Singaporean businesswoman in a blue blazer holding a large clipboard with four checkboxes, three already ticked with bold blue check marks and she is ticking the fourth with a pen; small sparkles around. Lines on the clipboard are simple blank lines, no writing. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "step_1",
+      "filename": "step-1-register.png",
+      "section": "How to claim - Step 1: Register & subscribe",
+      "aspect_ratio": "1:1",
+      "target_size_px": "800x800",
+      "needs_transparent": true,
+      "prompt": "Simple hand-drawn doodle spot icon, centered: a person's hand signing a blank form on a clipboard with a pen, a small blue check badge in the corner. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, lots of padding around the icon, consistent icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "step_2",
+      "filename": "step-2-onboard.png",
+      "section": "How to claim - Step 2: Onboarding & training",
+      "aspect_ratio": "1:1",
+      "target_size_px": "800x800",
+      "needs_transparent": true,
+      "prompt": "Simple hand-drawn doodle spot icon, centered: a laptop showing a video call with a friendly trainer's face and a small headset next to the laptop, representing online onboarding and training. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, lots of padding around the icon, consistent icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "step_3",
+      "filename": "step-3-submit.png",
+      "section": "How to claim - Step 3: Submit e-invoice to IRAS via InvoiceNow",
+      "aspect_ratio": "1:1",
+      "target_size_px": "800x800",
+      "needs_transparent": true,
+      "prompt": "Simple hand-drawn doodle spot icon, centered: a digital invoice document with blank lines flying out of a computer monitor along a dotted arrow, with a paper-plane shape and a blue check mark circle. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, lots of padding around the icon, consistent icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "step_4",
+      "filename": "step-4-receive-grant.png",
+      "section": "How to claim - Step 4: Receive S$1,000 grant",
+      "aspect_ratio": "1:1",
+      "target_size_px": "800x800",
+      "needs_transparent": true,
+      "prompt": "Simple hand-drawn doodle spot icon, centered: an open hand receiving a small money bag and a few falling gold coins, with tiny celebration sparkles. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, gold (#F5B82E) only on the coins and money bag, pure white background, lots of padding around the icon, consistent icon set style. No text, no letters, no numbers, no dollar signs, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "net_cost",
+      "filename": "net-cost-savings.png",
+      "section": "Net cost after grant (pricing calculation block)",
+      "aspect_ratio": "4:3",
+      "target_size_px": "1200x900",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration: a happy Indian Singaporean business owner in a blue shirt dropping a gold coin into a large light-blue piggy bank, next to a tall receipt that is being cut shorter by a big pair of scissors, symbolising lower cost thanks to a grant. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), gold (#F5B82E) only on the coin, pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "benefit_efficiency",
+      "filename": "benefit-efficiency.png",
+      "section": "Benefits card 1: Operational efficiency",
+      "aspect_ratio": "1:1",
+      "target_size_px": "600x600",
+      "needs_transparent": true,
+      "prompt": "Minimal hand-drawn doodle icon, centered: a stopwatch with a lightning bolt beside it, representing saving time. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, generous padding, matching icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "benefit_compliance",
+      "filename": "benefit-compliance.png",
+      "section": "Benefits card 2: Mandatory compliance",
+      "aspect_ratio": "1:1",
+      "target_size_px": "600x600",
+      "needs_transparent": true,
+      "prompt": "Minimal hand-drawn doodle icon, centered: a shield with a bold check mark in front of a stack of documents, representing tax compliance and protection. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, generous padding, matching icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "benefit_growth",
+      "filename": "benefit-growth.png",
+      "section": "Benefits card 3: Business growth / cloud",
+      "aspect_ratio": "1:1",
+      "target_size_px": "600x600",
+      "needs_transparent": true,
+      "prompt": "Minimal hand-drawn doodle icon, centered: a rising bar chart with an upward arrow and a small cloud above it, representing cloud-based business growth. Bold black ink outlines, flat blue (#4A90E2) and light blue (#A9CFF5) fills, pure white background, generous padding, matching icon set style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "why_netiquette",
+      "filename": "why-netiquette-team.png",
+      "section": "Why Netiquette (trust section, beside badges)",
+      "aspect_ratio": "4:3",
+      "target_size_px": "1200x900",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration: a small friendly support team of three diverse Singaporean staff (Chinese, Malay, Indian) wearing headsets and blue shirts, one giving a thumbs up, one holding a laptop, one waving, standing together as a helpful local team. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "faq",
+      "filename": "faq-questions.png",
+      "section": "FAQ (beside accordion)",
+      "aspect_ratio": "4:3",
+      "target_size_px": "1200x900",
+      "needs_transparent": true,
+      "prompt": "Hand-drawn doodle illustration: a curious young Singaporean woman with long black hair in a blue cardigan, hand on chin, looking up at three large floating question marks and one light bulb that is lighting up, friendly and thoughtful mood. Bold black ink outlines, flat fills in blue (#4A90E2) and light blue (#A9CFF5), pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "cta_final",
+      "filename": "cta-rocket.png",
+      "section": "Final CTA banner (on navy #2B4A6B background)",
+      "aspect_ratio": "1:1",
+      "target_size_px": "1000x1000",
+      "needs_transparent": true,
+      "note": "Must be background-removed because it sits on a navy banner.",
+      "prompt": "Hand-drawn doodle illustration: a cheerful business owner riding a small rocket that launches out of an open laptop, with a trail of dotted clouds and stars, symbolising getting started quickly. Bold black ink outlines, flat fills in white, blue (#4A90E2) and light blue (#A9CFF5), pure white background, minimal shading, playful SaaS website style. No text, no letters, no numbers, no logos, no watermark, no gradients, no 3D."
+    },
+    {
+      "id": "og_image",
+      "filename": "og-share.png",
+      "section": "Social share preview (WhatsApp / LinkedIn / Facebook link preview)",
+      "aspect_ratio": "1.91:1",
+      "target_size_px": "1200x630",
+      "needs_transparent": false,
+      "note": "This one contains text on purpose. Check spelling carefully after generating; regenerate if any letter is wrong.",
+      "prompt": "Wide web banner 1200x630, clean white background with a soft light-blue (#A9CFF5) rounded shape on the right. On the left, bold dark navy (#2B4A6B) sans-serif headline exactly: \"Claim Your S$1,000 InvoiceNow Grant\" and below it a smaller blue (#4A90E2) line exactly: \"For GST-registered Singapore SMEs\". On the right, a hand-drawn doodle of a smiling business owner at a laptop with gold coins flying out of the screen. Bold black ink outlines, flat colours, playful SaaS style. No other text, no logos, no watermark, no gradients, no 3D."
+    }
+  ],
+
+  "client_supplied_assets": [
+    { "filename": "logo-netiquette.svg", "use": "Header + footer", "source": "Netiquette brand files" },
+    { "filename": "favicon.png", "use": "Browser tab icon", "source": "Existing netiquette.com.sg favicon" },
+    { "filename": "logo-iras.png", "use": "Trust bar + InvoiceNow explainer panel", "source": "Official file, use per IRAS guidelines" },
+    { "filename": "logo-imda.png", "use": "Trust bar + grant section", "source": "Official file / IMDA accreditation mark" },
+    { "filename": "badge-iras-asr-plus.png", "use": "Trust bar", "source": "Netiquette (already on Seamless Filing page)" },
+    { "filename": "logo-peppol-invoicenow.png", "use": "Explainer section", "source": "Official InvoiceNow / Peppol mark, only if allowed" },
+    { "filename": "logo-acra.png", "use": "Optional, only if Seamless Filing is mentioned", "source": "Official file" }
+  ],
+
+  "made_with_code_no_image_needed": [
+    "Navy CTA banner background with dots and soft blobs (CSS)",
+    "Section dividers, line decorations beside headings (CSS)",
+    "Timeline 2026-2031 bars and markers (HTML/CSS)",
+    "Check-mark bullets, FAQ chevrons, WhatsApp button icon (inline SVG)"
+  ]
+}
