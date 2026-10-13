@@ -265,6 +265,7 @@ p { margin: 0 0 1em; }
 .calc__row { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; }
 .calc__row span:last-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
 .calc__row--minus span:last-child { color: #1E9E5A; }
+.calc__row--subtotal { border-top: 1px solid var(--ink); font-weight: 700; }
 .calc__row--total { border-bottom: 0; border-top: 2px solid var(--ink); font-weight: 700; color: var(--ink); font-size: 16px; }
 .calc__row--total span:last-child { color: var(--blue); }
 .benefits { display: grid; gap: 18px; }
