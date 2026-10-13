@@ -155,7 +155,7 @@ p { margin: 0 0 1em; }
     radial-gradient(circle at 5% 90%, rgba(169,207,245,.25), transparent 40%),
     #fff;
 }
-.hero__inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero__inner { display: grid; grid-template-columns: .9fr 1.2fr; gap: 56px; align-items: center; }
 .hero h1 { font-size: clamp(32px, 4.4vw, 52px); font-weight: 800; letter-spacing: -.01em; }
 .hl { color: var(--blue); position: relative; white-space: nowrap; }
 .hl::after {
@@ -169,7 +169,7 @@ p { margin: 0 0 1em; }
   font-size: 14px; color: var(--muted);
 }
 .hero__trust strong { color: var(--ink); }
-.hero__art { position: relative; }
+.hero__art { position: relative; transform: scale(1.18); transform-origin: center; }
 .float-card {
   position: absolute; left: -24px; bottom: 24px; background: #fff; border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 18px 22px; display: flex; flex-direction: column; max-width: 230px;
@@ -241,9 +241,11 @@ p { margin: 0 0 1em; }
   padding: 32px 28px 18px; box-shadow: var(--shadow-sm);
 }
 .module--featured { border: 2px solid var(--blue); box-shadow: var(--shadow); }
+.module__head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.module__logo { width: 36px; height: 36px; flex-shrink: 0; }
 .module__tag {
   display: inline-block; font-size: 13px; font-weight: 700; color: #fff; background: var(--navy);
-  padding: 4px 12px; border-radius: 8px; margin-bottom: 14px;
+  padding: 4px 12px; border-radius: 8px;
 }
 .module--featured .module__tag { background: var(--blue); }
 .module__ribbon {

@@ -80,9 +80,10 @@
         </div>
       </div>
       <div class="container supported">
-        <span>Grant scheme by</span>
-        <img src="https://netiquette.com.sg/assets/img/IMDA.png" alt="IMDA">
-        <img src="https://netiquette.com.sg/assets/img/iras-seeklogo.png" alt="IRAS">
+        <span>Netiquette 3-in-1 Suite</span>
+        <img src="assets/img/ams.png" alt="AMS">
+        <img src="assets/img/ims.png" alt="IMS">
+        <img src="assets/img/payroll.png" alt="Payroll">
       </div>
     </section>
 
@@ -241,7 +242,7 @@
         </div>
         <div class="suite">
           <article class="module">
-            <span class="module__tag">AMS</span>
+            <div class="module__head"><img class="module__logo" src="assets/img/ams.png" alt="AMS"><span class="module__tag">AMS</span></div>
             <h3>Accounting Management System</h3>
             <ul class="checks">
               <li>GST-compliant invoicing and billing</li>
@@ -251,7 +252,7 @@
             </ul>
           </article>
           <article class="module module--featured">
-            <span class="module__tag">IMS</span>
+            <div class="module__head"><img class="module__logo" src="assets/img/ims.png" alt="IMS"><span class="module__tag">IMS</span></div>
             <span class="module__ribbon">InvoiceNow inside</span>
             <h3>Inventory Management System</h3>
             <ul class="checks">
@@ -262,7 +263,7 @@
             </ul>
           </article>
           <article class="module">
-            <span class="module__tag">Payroll</span>
+            <div class="module__head"><img class="module__logo" src="assets/img/payroll.png" alt="Payroll"><span class="module__tag">Payroll</span></div>
             <h3>Payroll Management</h3>
             <!-- TODO: confirm payroll feature list with Netiquette team -->
             <ul class="checks">
@@ -279,11 +280,11 @@
           <div class="netcost">
             <figure class="art art--netcost"><img src="assets/img/net-cost-savings.png" alt="" onerror="this.parentNode.classList.add('missing');this.remove()"></figure>
             <h3>Your Net Cost After the Grant</h3>
-            <!-- TODO: replace with final 3-in-1 package price once confirmed -->
             <div class="calc">
-              <div class="calc__row"><span>12-month 3-in-1 Suite subscription</span><span>Paid plan</span></div>
+              <div class="calc__row"><span>3-in-1 Suite (AMS + IMS + Payroll), S$600/product × 12 months</span><span>S$1,800</span></div>
               <div class="calc__row calc__row--minus"><span>IMDA GST InvoiceNow Transition Grant</span><span>− S$1,000</span></div>
-              <div class="calc__row calc__row--total"><span>Your net cost</span><span>Much lower</span></div>
+              <div class="calc__row calc__row--minus"><span>Netiquette top-up subsidy</span><span>− S$800</span></div>
+              <div class="calc__row calc__row--total"><span>Your net cost</span><span>S$0</span></div>
             </div>
             <a href="#contact" class="btn btn--primary">Get Your Quote</a>
           </div>
@@ -543,7 +544,35 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.4Z"/></svg>
   </a>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
+    // Scroll/entrance animations
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.defaults({ ease: 'power3.out', force3D: true });
+
+      gsap.timeline({ defaults: { duration: 1 } })
+        .from('.hero__text > *', { opacity: 0, y: 32, stagger: .15 })
+        .from('.hero__art', { opacity: 0, y: 32, scale: .97 }, '-=.7')
+        .from('.float-card', { opacity: 0, y: 20, duration: .7 }, '-=.4');
+
+      gsap.set(
+        '.section-head, .stat, .step, .module, .benefit, .plan, .timeline__item, .faq details, .netcost, .trust, figure.art',
+        { opacity: 0, y: 40 }
+      );
+
+      ScrollTrigger.batch(
+        '.section-head, .stat, .step, .module, .benefit, .plan, .timeline__item, .faq details, .netcost, .trust, figure.art',
+        {
+          start: 'top 90%',
+          once: true,
+          onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 1, stagger: .1, overwrite: true }),
+        }
+      );
+    }
+
     // Mobile menu
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('nav');
