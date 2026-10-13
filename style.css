@@ -435,16 +435,21 @@ p { margin: 0 0 1em; }
   .container { padding: 0 16px; }
   .announce { font-size: 13px; padding: 10px 40px 10px 16px; text-align: left; }
   .header__logo img { height: 36px; }
+  .section { padding: 56px 0; }
+  .section-head { margin-bottom: 36px; }
   .hero { padding: 48px 0 32px; }
+  .hero__art { transform: scale(1); }
   .hero__actions .btn { width: 100%; }
   .hl { white-space: normal; }
   .section-head .title::before, .section-head .title::after { display: none; }
-  .stats, .steps, .trust-grid, .form__row { grid-template-columns: 1fr; }
+  .form__row { grid-template-columns: 1fr; }
+  .stats, .steps, .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .float-card { position: static; margin-top: 16px; max-width: none; }
   .supported { flex-wrap: wrap; gap: 16px; }
   .form { padding: 24px 18px; }
   .plan, .netcost { padding: 26px 20px; }
   .benefit { padding: 18px; }
+  .art--mini { width: 72px; }
   .cta { padding-bottom: 72px; }
   .cta__inner { padding: 40px 20px; border-radius: 20px; }
   .wa-float { width: 52px; height: 52px; right: 16px; bottom: 16px; }
