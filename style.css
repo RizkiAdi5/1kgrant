@@ -171,13 +171,11 @@ p { margin: 0 0 1em; }
 }
 .hero__trust strong { color: var(--ink); }
 .hero__art { position: relative; transform: scale(1.18); transform-origin: center; }
-.float-card {
-  position: absolute; left: -24px; bottom: 24px; background: #fff; border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 18px 22px; display: flex; flex-direction: column; max-width: 230px;
+.flyer__img {
+  display: block; max-width: 1100px; width: 100%; height: auto; margin: 0 auto;
+  border-radius: 16px; box-shadow: var(--shadow);
 }
-.float-card__label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
-.float-card__value { font-size: 34px; font-weight: 800; color: var(--ink); line-height: 1.2; }
-.float-card__note { font-size: 12px; color: var(--muted); }
+.flyer__actions { text-align: center; margin-top: 24px; }
 .supported {
   display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 48px;
   padding-top: 28px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted);
@@ -420,7 +418,6 @@ p { margin: 0 0 1em; }
   .hero__inner, .split, .timeline-wrap, .faq-wrap, .contact, .value { grid-template-columns: 1fr; gap: 40px; }
   .split--reverse .split__text, .split--reverse .split__art { order: initial; }
   .hero__art { max-width: 520px; margin: 0 auto; width: 100%; }
-  .float-card { left: 0; }
   .timeline__art { max-width: 300px; margin: 0 auto; }
   .suite, .compare, .testimonials { grid-template-columns: 1fr; }
   .faq-wrap__head { position: static; }
@@ -444,7 +441,6 @@ p { margin: 0 0 1em; }
   .section-head .title::before, .section-head .title::after { display: none; }
   .form__row { grid-template-columns: 1fr; }
   .stats, .steps, .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .float-card { position: static; margin-top: 16px; max-width: none; }
   .supported { flex-wrap: wrap; gap: 16px; }
   .form { padding: 24px 18px; }
   .plan, .netcost { padding: 26px 20px; }
