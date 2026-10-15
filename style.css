@@ -402,6 +402,30 @@ p { margin: 0 0 1em; }
 .wa-float:hover { transform: scale(1.06); }
 .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 
+/* ---------- WhatsApp agent picker ---------- */
+.wa-pick { position: relative; display: inline-block; }
+.wa-pick > summary { list-style: none; cursor: pointer; }
+.wa-pick > summary::-webkit-details-marker { display: none; }
+.wa-pick__menu {
+  position: absolute; top: calc(100% + 10px); left: 0; z-index: 70; min-width: 220px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow);
+  padding: 8px; display: flex; flex-direction: column; gap: 2px;
+}
+.wa-pick__menu a {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 9px;
+  font-size: 14.5px; font-weight: 600; color: var(--ink);
+}
+.wa-pick__menu a:hover { background: var(--blue-soft); color: var(--blue); }
+.wa-pick__menu a svg { width: 18px; height: 18px; fill: var(--green); flex-shrink: 0; }
+.wa-pick--float { position: fixed; right: 22px; bottom: 22px; z-index: 60; }
+.wa-pick--float > summary {
+  width: 58px; height: 58px; border-radius: 50%; background: var(--green);
+  display: grid; place-items: center; box-shadow: 0 8px 22px rgba(37, 211, 102, .45); transition: transform .2s;
+}
+.wa-pick--float > summary:hover { transform: scale(1.06); }
+.wa-pick--float > summary svg { width: 30px; height: 30px; fill: #fff; }
+.wa-pick--float .wa-pick__menu { top: auto; bottom: calc(100% + 12px); left: auto; right: 0; }
+
 /* =========================================================
    Responsive
    ========================================================= */
