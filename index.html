@@ -143,8 +143,83 @@
       </div>
     </section>
 
+    <!-- ========== 3-IN-1 SUITE (TABBED) ========== -->
+    <section class="section" id="modules">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">One connected system</span>
+          <h2 class="title">Netiquette 3-in-1 Suite</h2>
+          <p>Accounting, Inventory and Payroll share the same data, so a sale flows into your stock, books and GST reports automatically.</p>
+        </div>
+
+        <div class="module-tabs" data-module-tabs>
+          <div class="module-tabs__nav" role="tablist">
+            <button class="module-tab is-active" type="button" role="tab" data-target="ams"><span class="module-tab__dot" style="background:#4CAF3C"></span>Accounting</button>
+            <button class="module-tab" type="button" role="tab" data-target="ims"><span class="module-tab__dot" style="background:#E8306F"></span>Inventory</button>
+            <button class="module-tab" type="button" role="tab" data-target="payroll"><span class="module-tab__dot" style="background:#A233C9"></span>Payroll</button>
+          </div>
+
+          <div class="module-panels">
+            <article class="module-panel is-active" id="panel-ams" style="--panel-tint:#4CAF3C">
+              <div class="module-panel__text">
+                <span class="eyebrow">Accounting Management System</span>
+                <h3>Accounting</h3>
+                <p>Manage your books, stay GST-compliant, and file tax submissions directly to IRAS.</p>
+                <ul class="checks">
+                  <li>OCR data capture and GST-compliant invoicing</li>
+                  <li>Automated GST F5 and Income Tax Form C-S filing to IRAS</li>
+                  <li>Full bookkeeping and financial reporting</li>
+                  <li>Multi-currency support</li>
+                </ul>
+                <a href="#contact" class="module-panel__link">Explore Accounting &rarr;</a>
+              </div>
+              <div class="module-panel__art">
+                <img src="assets/img/ams.png" alt="AMS">
+              </div>
+            </article>
+
+            <article class="module-panel" id="panel-ims" style="--panel-tint:#E8306F">
+              <div class="module-panel__text">
+                <span class="eyebrow">Inventory Management System · InvoiceNow inside</span>
+                <h3>Inventory</h3>
+                <p>Send e-invoices via InvoiceNow and track stock in real time, with no transaction cap.</p>
+                <ul class="checks">
+                  <li>InvoiceNow (Peppol) unlimited send &amp; receive, no transaction cap</li>
+                  <li>Purchase and sales order management</li>
+                  <li>Real-time inventory tracking and control</li>
+                  <li>Location, batch, expiry and matrix items</li>
+                </ul>
+                <a href="#contact" class="module-panel__link">Explore Inventory &rarr;</a>
+              </div>
+              <div class="module-panel__art">
+                <img src="assets/img/ims.png" alt="IMS">
+              </div>
+            </article>
+
+            <article class="module-panel" id="panel-payroll" style="--panel-tint:#A233C9">
+              <div class="module-panel__text">
+                <span class="eyebrow">Payroll Management</span>
+                <h3>Payroll</h3>
+                <p>Run payroll for up to 50 employees, linked straight to your accounting, no double entry.</p>
+                <ul class="checks">
+                  <li>Supports up to 50 employees</li>
+                  <li>Salary, claims and leave management</li>
+                  <li>Attendance tracking</li>
+                  <li>Linked to accounting, no double entry</li>
+                </ul>
+                <a href="#contact" class="module-panel__link">Explore Payroll &rarr;</a>
+              </div>
+              <div class="module-panel__art">
+                <img src="assets/img/payroll.png" alt="Payroll">
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== FLYER ========== -->
-    <section class="section" id="flyer">
+    <section class="section section--alt" id="flyer">
       <div class="container">
         <div class="section-head">
           <h2 class="title">Grant Summary at a Glance</h2>
@@ -158,7 +233,7 @@
     </section>
 
     <!-- ========== PRICING / NET COST ========== -->
-    <section class="section section--alt" id="suite">
+    <section class="section" id="suite">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Netiquette 3-in-1 Suite</span>
@@ -209,7 +284,7 @@
     </section>
 
     <!-- ========== LEARN MORE BANNER ========== -->
-    <section class="section">
+    <section class="section section--alt">
       <div class="container learn-more">
         <div>
           <h2 class="title title--left">Want the Full Details?</h2>
@@ -220,7 +295,7 @@
     </section>
 
     <!-- ========== CONTACT FORM (UI only, backend later) ========== -->
-    <section class="section section--alt" id="contact">
+    <section class="section" id="contact">
       <div class="container contact">
         <div class="contact__info">
           <span class="eyebrow">Get started</span>
@@ -348,6 +423,18 @@
         }
       );
     }
+
+    // 3-in-1 Suite tabs
+    document.querySelectorAll('[data-module-tabs]').forEach((wrap) => {
+      wrap.querySelectorAll('.module-tab').forEach((tab) => {
+        tab.addEventListener('click', () => {
+          wrap.querySelectorAll('.module-tab').forEach((t) => t.classList.remove('is-active'));
+          wrap.querySelectorAll('.module-panel').forEach((p) => p.classList.remove('is-active'));
+          tab.classList.add('is-active');
+          wrap.querySelector('#panel-' + tab.dataset.target).classList.add('is-active');
+        });
+      });
+    });
 
     // Mobile menu
     const toggle = document.getElementById('navToggle');
